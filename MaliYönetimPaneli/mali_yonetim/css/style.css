@@ -1,0 +1,383 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+.wrapper{
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+.sideBar{
+    width: 250px;
+    background: #8502b9;
+    color: white;
+    padding:10px;
+}
+.sideBar ul a{
+    display: block;
+    margin: 12px ;
+    padding: 5px;
+    background: #5b0080;
+    color: white;
+    border-radius: 6px;
+    text-align: start;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.2rem;
+}
+.sideBar a:hover{
+    background: #fff200;
+    color: #000;
+}
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    background: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.topbar h3{
+    color: #5b0080;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: xx-large;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+/* box içindeki form’u ortalar */
+.box .form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* form’un görünümü */
+.box .user-form {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* input ve select’ler */
+.box .user-form input,
+.box .user-form select {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.box .user-form input::placeholder {
+  color: #aaa;
+}
+
+/* odaklanınca mavi kenarlık */
+.box .user-form input:focus,
+.box .user-form select:focus {
+  border-color: rgb(75, 0, 118);
+  outline: none;
+}
+
+/* buton */
+.box .user-form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #5b0080;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+
+.box .user-form button:hover {
+  background-color: #5b0080;
+}
+/* Başlık */
+.box h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #5b0080;
+  padding-bottom: 8px;
+}
+
+/* “Yeni Kullanıcı” butonu */
+.box > a {
+  display: inline-block;
+  margin-bottom: 20px;
+  background-color: #5b0080;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+.box > a:hover {
+  background-color: #5b0080;
+}
+/* Tablo düzeni */
+.box table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.box table th,
+.box table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+.box table th {
+  background-color: #5b0080;
+  color: #fff;
+  font-weight: 300;
+}
+/* Satır arka planı ve hover efekti */
+.box table tr:nth-child(even) td {
+  background-color: #f2f2f2;
+}
+.box table tr:hover td {
+  background-color: #e6f7ff;
+}
+
+/* İşlem linkleri */
+.box table td a {
+  text-decoration: none;
+  margin: 0 6px;
+  font-weight: 500;
+}
+.box table td .red{
+  color: #e74c3c;
+}
+
+.box table td .green{
+  color: #27ae60;
+}
+
+.box .harcamalar-wrapper {
+  height: 700px;      /* ihtiyaca göre yükseklik ayarla */
+  overflow-y: auto;       /* dikey scrollbar */
+  -webkit-overflow-scrolling: touch;
+}
+
+.box .harcamalar-wrapper table {
+  width: 100%;            /* yatay kaydırma olmasın */
+  border-collapse: collapse;
+}
+.box .search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-end;
+}
+
+.box .search-form select,
+.box .search-form input{
+  height: 2.5rem;
+  padding: 0 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 1rem;
+}
+
+.box .search-form button {
+  height: 2.5rem;
+  padding: 0 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #5b0080;;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.box .search-form button:hover {
+  background-color:  #5b0080;;
+}
+
+.box .search-form a {
+  height: 2.5rem;
+  padding: 0 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #5b0080;;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.box .search-form a:hover {
+  background-color:  #5b0080;;
+}
+.box .user-form .pre-wrap {
+  display: block;
+  /* İstediğin karakter sınırına göre ayarla (örneğin 80ch ≈ 80 karakter) */
+  max-width: 80ch;            
+
+  /* Orijinal boşlukları koru ama satır kaydırmaya izin ver */
+  white-space: pre-wrap;      
+  /* Satır sonlarında otomatik kelime kaydırma */
+  overflow-wrap: break-word;  
+  /* Gerektiğinde kelime ortasında da kır (daha agresif) */
+  word-break: break-all;      
+
+  /* İstersen yükseklik ve kaydırma çubuğu */
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.box .user-form .return a{
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background: #5b0080;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-weight: 500;
+  margin: 20px 0;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f7fa;
+}
+
+.login-box {
+  width: 320px;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.login-box h1{
+  margin-bottom: 8.0rem;
+  font-size: 3.5rem;
+  text-align: justify;
+  color:  #5b0080;
+}
+.login-box h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #5b0080;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.login-form input::placeholder {
+  color: #999999;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color:  #5b0080;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-form button:hover {
+  background-color:  #5b0080;
+}
+/* Container’ı göreceli konumla ve taşmayı gizleyerek ayarla */
+.login-box {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+/* Başlığın normal stilinden vazgeçme, animasyon için göreceli konum ver */
+.reveal-title {
+  margin: 0;
+  font-size: 3.5rem;
+  color: #5b0080;
+  position: relative;
+  /* Başlangıçta tamamen sola gizli */
+  transform: translateX(-100%);
+  animation: slideIn 3.0s ease-out forwards;
+}
+
+/* Ortada çizgi: pseudo-element */
+.login-box::before {
+  content: "";
+  position: absolute;
+  top: 50%;               /* kutu yüksekliğinin ortası */
+  left: 0;
+  width: 100%;
+  height: 2px;            /* çizgi kalınlığı */
+  background-color: #5b0080;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* Başlığın çizginin üzerinde görünmesi için */
+.reveal-title {
+  z-index: 2;
+}
+
+/* Animasyon tanımı */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    /* çizgi hizasına geldiğinde yarı görünür */
+    transform: translateX(0);
+  }
+  100% {
+    /* tam konumuna yerleşsin */
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,94 @@
+/* Genel sayfa ayarları */
+.iletisim-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Sol ve sağ alan kapsayıcı */
+.iletisim-container {
+  display: flex;
+  gap: 50px;
+  max-width: 1000px;
+  width: 100%;
+  flex-wrap: wrap; /* Mobilde alt alta geçmesi için */
+}
+
+.iletisim-left {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+}
+
+.iletisim-left p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #303040;
+}
+
+/* Sağ taraf form */
+.iletisim-right {
+  flex: 1 1 55%;
+}
+
+.iletisim-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.iletisim-right textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-size: 1rem;
+}
+
+.input-row {
+  display: flex;
+  gap: 15px;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.iletisim-right button {
+  background: #303040;
+  color: #e8b681;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.iletisim-right button:hover {
+  background: #505050;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+  .iletisim-container {
+    flex-direction: column;
+  }
+
+  .iletisim-left, .iletisim-right {
+    flex: 1 1 100%;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+}

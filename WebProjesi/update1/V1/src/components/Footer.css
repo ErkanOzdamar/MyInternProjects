@@ -1,0 +1,49 @@
+
+.footer {
+  position: relative;
+  width: 100%;
+  background-color: #303040;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 80px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+
+/* Ortadaki içerik */
+.footer-center {
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer-center p {
+  margin: 0 0 10px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+.footer-center .social-icons a {
+  margin: 0 10px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-center .social-icons a:hover {
+  transform: scale(1.2);
+  color: #ffffff;
+}
+
+/* Sağ HeroCircle */
+/* Sol HeroCircle */
+.footer-left,
+.footer-right{
+  position: relative;       
+  width: 200px;
+  height: 200px;
+  left: -80px;
+  top: -50px; 
+}

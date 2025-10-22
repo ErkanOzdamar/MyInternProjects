@@ -1,0 +1,145 @@
+.urunlerimiz-detay-page {
+  position: relative;
+  background-color: #fdf4e8;
+}
+
+/* Banner */
+.urunlerimiz-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 50px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.banner-left {
+  width: 600px;
+  height: 600px;
+  flex-shrink: 0;
+}
+
+.banner-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.banner-right {
+  margin-left: 50px;
+  max-width: 500px;
+  color: #303040;
+}
+
+.banner-right h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.banner-right p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Alt kutular ve butonlar */
+.urunlerimiz-action-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.action-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f8f8;
+  height: 400px;
+  padding: 30px 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+.action-box button {
+  background: #e8b681;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: filter 0.3s ease;
+}
+
+.action-box button:hover {
+  filter: brightness(0.9);
+}
+
+/* Sağda küçük PNG kutucuğu */
+.action-box::after {
+  content: '';
+  display: block;
+  width: 150px;
+  height: 150px;
+  background-size: contain;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .banner-left {
+    width: 400px;
+    height: 400px;
+  }
+  .banner-right h1 {
+    font-size: 2.2rem;
+  }
+  .banner-right p {
+    font-size: 1rem;
+  }
+  .action-box {
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+  .action-box::after {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .urunlerimiz-banner {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    padding: 20px;
+  }
+  .banner-left {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .banner-right {
+    margin-left: 0;
+  }
+  .action-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .action-box::after {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .action-box {
+    padding: 15px;
+  }
+}

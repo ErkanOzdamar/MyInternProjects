@@ -1,0 +1,113 @@
+
+.logosSlider-wrapper {
+  background-color: #fdf4e8;
+  padding: 20px 0;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+
+.logos-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #000000;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 5px;
+  margin-bottom: 40px;
+  display: block;
+  border-bottom: 1px solid #e8b681;
+  padding-bottom: 5px;
+  width: fit-content;
+  margin: 0 auto 40px auto;
+}
+
+
+.logos-container-wrapper {
+  width: 90%; 
+  max-width: 750px; 
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  background-color: #fdf4e8;
+  border-radius: 10px;
+}
+.logos-container-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    pointer-events: none; 
+    background: linear-gradient(to right, #fdf4e8 0%, rgba(253, 244, 232, 0) 100%);
+    z-index: 10;
+}
+
+/* Sağ kenar maskesi */
+.logos-container-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to left, #fdf4e8 0%, rgba(253, 244, 232, 0) 100%);
+    z-index: 10;
+}
+
+/* Logos Container */
+.logos-container {
+  display: flex;
+  align-items: center;
+  will-change: transform;
+}
+
+/* Logo Item */
+.logo-item {
+  flex-shrink: 0;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-item img {
+  max-width: 120px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .logo-item img {
+    max-width: 130px;
+    max-height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logosSlider-wrapper {
+    padding: 60px 0;
+  }
+  .logos-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  .logo-item img {
+    max-width: 110px;
+    max-height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logos-title {
+    font-size: 1.8rem;
+  }
+  .logo-item img {
+    max-width: 90px;
+    max-height: 50px;
+  }
+}

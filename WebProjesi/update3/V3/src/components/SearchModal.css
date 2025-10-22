@@ -1,0 +1,121 @@
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.search-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 90%; 
+  max-width: 450px; 
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-weight: 300;
+}
+
+.search-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #c08e37;
+  font-family: 'Inter', sans-serif;
+}
+
+.close-btn {
+  padding: 4px;
+  font-size: 1.2rem;
+  color: #c08e37;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #c0aa84;
+}
+
+.search-modal input {
+  padding: 10px 12px; 
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  border: 1px solid #c0aa84;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-modal input:focus {
+  border-color: #c08e37;
+  box-shadow: 0 0 3px rgba(192, 170, 132, 0.4);
+}
+
+.search-results {
+  max-height: 300px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+  border-top: 1px solid #eee;
+}
+
+.search-item {
+  padding: 10px 8px; 
+  color: #333;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400; 
+  cursor: pointer;
+  transition: background 0.2s, color 0.3s;
+  border-bottom: 1px solid #f5f5f5; 
+}
+.search-item:last-child {
+    border-bottom: none;
+}
+
+.search-item:hover {
+  background-color: #f0f0f0;
+  color: #c08e37;
+}
+
+.search-item.no-result {
+    color: #888;
+    cursor: default;
+    font-style: italic;
+}
+.search-item.no-result:hover {
+    background-color: transparent;
+    color: #888;
+}
+
+
+@media (max-width: 480px) {
+    .search-modal {
+        padding: 15px;
+        gap: 10px;
+    }
+    .search-header h2 {
+        font-size: 1.1rem;
+    }
+    .search-modal input {
+        padding: 8px 10px;
+    }
+    .search-item {
+        padding: 8px 6px;
+        font-size: 0.95rem;
+    }
+}
